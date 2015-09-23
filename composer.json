@@ -1,0 +1,33 @@
+{
+	"name": "koshatul/haproxyweb",
+	"description": "HAProxy Web Condenser",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Kosh",
+			"email": "koshatul@gmail.com",
+			"homepage": "http://koshatul.com/"
+		}
+	],
+	"bin": ["bin/test"],
+	"repositories": [
+	    { "type": "vcs", "url": "git@entropy.fsvr.net:koshatul/config.git"   },
+		{ "type": "vcs", "url": "https://github.com/Koshatul/haproxy-api"    }
+	],
+	"require": {
+		"php": ">=5.3",
+		"icecave/semver": "3.0.1",
+		"symfony/console": "2.7.4",
+		"respect/rest": "dev-master",
+		"koshatul/config": "dev-master",
+		"bigwhoop/haproxy-api" : "dev-master"
+	},
+	"require-dev": {
+		"icecave/archer": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Koshatul\\HAProxyWeb\\": "src"
+		}
+	}
+}

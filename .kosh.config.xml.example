@@ -1,0 +1,5 @@
+[haproxyweb]
+server[proxy1]='http://proxy1:8080'
+server[proxy2]='http://proxy2:8080'
+username='username'
+password='changeit'

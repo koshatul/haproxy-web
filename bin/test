@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php 
+
+$packageRoot = dirname(__DIR__);
+$matches = array();
+if (preg_match('{^(.*)/vendor/.+/.+$}', $packageRoot, $matches)) {
+	require $matches[1] . '/vendor/autoload.php';
+} else {
+	require $packageRoot . '/vendor/autoload.php';
+}
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+// Stats:
+$application->add(new \Koshatul\HAProxyWeb\Console\Stats());
+
+//$application->setDefaultCommand($runOnce->getName());
+$application->run();

@@ -1,0 +1,7 @@
+# Header: $Id: .htaccess 3 2009-10-18 10:48:37Z kosh $
+
+Options FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ /index.php [L,QSA]
